@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      {{ title }}
+    </title>
+
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans:400,400italic,700italic,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ base }}css/style.css">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" href="/img/apple-touch-icon-precomposed.png">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+  <body>
+    <header class="cssdoc_header gradient">
+      <div class="cssdoc_container">
+        <a href="{{base}}" title="{{title}}" class="cssdoc_logo">
+          <img src="{{base}}img/logo.png" alt="{{title}}"/>
+        </a>
+        <h1>
+          {{ title }}
+        </h1>
+      </div>
+    </header>
+    <div class="cssdoc_container">
+      <div class="cssdoc_col--1-4">
+        <nav>
+          <ul class="cssdoc_menu">
+          {% for item in items %}
+            <li>
+              <a href="" class="cssdoc_menu__item">{{ item.title }}</a>
+              <ul class="cssdoc_submenu">
+                {% for section in item.sections %}
+                  <li>
+                    <a href="" class="cssdoc_submenu__item">{{section.title}}</a>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+          </ul>
+        </nav>
+      </div>
+      <div class="cssdoc_col--3-4">
+        {% for item in items %}
+          <section class="cssdoc_section">
+            <header>
+              <h1>{{ item.title }}</h1>
+              <p>
+                {{ item.resume | raw }}
+              </p>
+            </header>
+            <div class="cssdoc_section__body">
+              {% for section in item.sections %}
+                <h2>{{section.title}}</h2>
+                {{ section.content | raw }}
+              {% endfor %}
+            </div>
+          </section>
+        {% endfor %}
+      </div>
+    </div>
+    <footer class="cssdoc_footer">
+      <div class="cssdoc_container">
+        {{ footer }}
+      </div>
+    </footer>
+    <script src="{{ base }}js/script.js"></script>
+  </body>
+</html>
