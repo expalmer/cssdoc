@@ -197,7 +197,7 @@ Cssdoc.prototype.combineCss = function() {
   var styleCss = this.cssContents.join('');
   var templCss = fs.readFileSync( templatePath + '/style.css', 'utf8');
   var highlight = '';
-  highlight = fs.readFileSync( __dirname + '/node_modules/highlight.js/styles/' + this.opts.highlightTheme + '.css', 'utf8');
+  highlight = fs.readFileSync( require.resolve('highlight.js/styles/' + this.opts.highlightTheme + '.css'), 'utf8');
 
   fs.copySync( templatePath + '/logo.png', this.opts.destination + '/img/logo.png');
 
