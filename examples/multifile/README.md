@@ -3,6 +3,6 @@
 
 Here with separate files by category.
 
-    $ node app.js
+    $ npm install && node app.js
 
 After that, open the file ``build/index.html`` in your browser.
