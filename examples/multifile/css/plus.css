@@ -1,0 +1,33 @@
+/*---
+title: Plus
+resume: You can put more than only css...
+section: Any Language
+---
+
+You can put any language...like
+
+
+```javascript
+// js
+var name = 'John Doe';
+var func = function() {
+  return 1;
+}
+```
+
+```css
+.my-class {
+  color: #000;
+  background: #123;
+}
+```
+
+```php
+<?php
+
+require('css/Styles.php');
+$style = new Styles();
+
+```
+
+*/

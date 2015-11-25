@@ -1,0 +1,221 @@
+/*---
+title: Typography
+resume: Headings, paragraphs, blockquotes, lists, and more have some global resets. It’s worth noting these aren’t the same as our Markdown styles.
+section: Headings
+---
+
+```example
+<h1>h1. Primer heading</h1>
+<h2>h2. Primer heading</h2>
+<h3>h3. Primer heading</h3>
+<h4>h4. Primer heading</h4>
+<h5>h5. Primer heading</h5>
+<h6>h6. Primer heading</h6>
+```
+
+```html
+<h1>h1. Primer heading</h1>
+<h2>h2. Primer heading</h2>
+<h3>h3. Primer heading</h3>
+<h4>h4. Primer heading</h4>
+<h5>h5. Primer heading</h5>
+<h6>h6. Primer heading</h6>
+```
+*/
+
+/*---
+title: Typography
+section: Blockquotes
+---
+
+Wrap ``<blockquote>`` around any HTML as the quote. For straight quotes, we recommend a ``<p>``.
+
+```example
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+```
+
+```html
+<blockquote>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+```
+*/
+
+
+/*---
+title: Navigation
+resume: Primer comes with several navigation components. Some were designed with singular purposes, while others were design to be more flexible and appear quite frequently
+section: Menu
+---
+
+The menu is a vertical list of navigational links. **A menu’s width and placement must be set by you**. If you like, just use our grid columns as a parent. Otherwise, apply a custom ``width``.
+
+```example
+<nav class="menu">
+  <a class="menu-item selected" href="#">Account</a>
+  <a class="menu-item" href="#">Profile</a>
+  <a class="menu-item" href="#">Emails</a>
+  <a class="menu-item" href="#">Notifications</a>
+</nav>
+```
+
+```html
+<nav class="menu">
+  <a class="menu-item selected" href="#">Account</a>
+  <a class="menu-item" href="#">Profile</a>
+  <a class="menu-item" href="#">Emails</a>
+  <a class="menu-item" href="#">Notifications</a>
+</nav>
+```
+*/
+
+/*---
+title: Navigation
+section: Tabnav
+---
+
+Use ``.right`` to align additional elements in the ``.tabnav``:
+
+```example
+<div class="tabnav">
+  <a class="btn btn-sm right" href="#">Button</a>
+  <nav class="tabnav-tabs">
+    <a href="#" class="tabnav-tab selected">Foo Tab</a>
+    <a href="#" class="tabnav-tab">Bar Tab</a>
+  </nav>
+</div>
+```
+
+```html
+<div class="tabnav">
+  <a class="btn btn-sm right" href="#">Button</a>
+  <nav class="tabnav-tabs">
+    <a href="#" class="tabnav-tab selected">Foo Tab</a>
+    <a href="#" class="tabnav-tab">Bar Tab</a>
+  </nav>
+</div>
+```
+*/
+
+
+/*---
+title: Forms
+resume: Style individual form controls and utilize common layouts.
+section: Form contrast
+---
+
+Textual form controls have a white background by default. You can change this to a light gray with ``.input-contrast``.
+
+```example
+<form>
+  <input type="text" placeholder="Default input">
+  <input class="input-contrast" type="text" placeholder="Input with contrast">
+</form>
+```
+
+```html
+<form>
+  <input type="text" placeholder="Default input">
+  <input class="input-contrast" type="text" placeholder="Input with contrast">
+</form>
+```
+*/
+
+/*---
+title: Forms
+section: Selects
+---
+
+Primer adds light ``height`` and ``vertical-align`` styles to ``<select>``s for all browsers to render them consistently with textual inputs.
+
+```example
+<form>
+  <select>
+    <option>Choose an option</option>
+    <option>Git</option>
+    <option>Subversion</option>
+    <option>Social Coding</option>
+    <option>Beets</option>
+    <option>Bears</option>
+    <option>Battlestar Galactica</option>
+  </select>
+</form>
+```
+
+```html
+<form>
+  <select>
+    <option>Choose an option</option>
+    <option>Git</option>
+    <option>Subversion</option>
+    <option>Social Coding</option>
+    <option>Beets</option>
+    <option>Bears</option>
+    <option>Battlestar Galactica</option>
+  </select>
+</form>
+```
+*/
+
+/*---
+title: Forms
+section: Form group validation
+---
+
+Convey errors and warnings for form groups.
+
+```example
+<form>
+  <dl class="form errored">
+    <dt><label>Example Text</label></dt>
+    <dd><input type="text" value="Example Value"></dd>
+    <dd class="error">This example input has an error.</dd>
+  </dl>
+  <br>
+  <dl class="form warn">
+    <dt><label>Example Text</label></dt>
+    <dd><input type="text" value="Example Value"></dd>
+    <dd class="warning">This example input has a warning.</dd>
+  </dl>
+</form>
+```
+
+```html
+<form>
+  <dl class="form errored">
+    <dt><label>Example Text</label></dt>
+    <dd><input type="text" value="Example Value"></dd>
+    <dd class="error">This example input has an error.</dd>
+  </dl>
+  <br>
+  <dl class="form warn">
+    <dt><label>Example Text</label></dt>
+    <dd><input type="text" value="Example Value"></dd>
+    <dd class="warning">This example input has a warning.</dd>
+  </dl>
+</form>
+```
+*/
+
+
+/*---
+title: Avatars
+resume: Avatars are images that users can set as their profile picture. On GitHub, they’re always going to be rounded squares. They can be custom photos, uploaded by users, or generated as Identicons as a placeholder.
+section: Basic example
+---
+
+Add ``.avatar`` to any ``<img>`` element to make it an avatar. This resets some key styles for alignment, address a Firefox image placeholder bug, and rounds the corners.
+
+Be sure to set ``width`` and ``height`` attributes for maximum browser performance.
+
+```example
+<img class="avatar" src="https://avatars3.githubusercontent.com/u/9919?v=3&s=72" width="72" height="72">
+```
+
+```html
+<img class="avatar" src="https://avatars3.githubusercontent.com/u/9919?v=3&s=72" width="72" height="72">
+```
+*/
+

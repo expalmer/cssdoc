@@ -1,0 +1,81 @@
+/*---
+title: Buttons
+resume: My Awesome buttons
+section: Default
+---
+
+To create a button, add the ``button`` classname to any ``<a>`` or ``<button>`` element.
+
+
+```example
+<button class="button">Default</button>
+```
+
+```html
+<button class="button">Default</button>
+```
+
+*/
+
+.button {
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  padding: .5em 1em;
+  color: #444;
+  color: rgba(0,0,0,.8);
+  border: 1px solid #999;
+  border: 0 rgba(0,0,0,0);
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-image: linear-gradient(transparent, rgba(0,0,0,.05) 40%, rgba(0,0,0,.1));
+}
+
+/*---
+title: Buttons
+section: Variations
+---
+
+Some button variations like ``primary``, ``success`` and ``error``.
+
+```example
+<a class="button button--primary" href="#">Primary</a>
+<a class="button button--success" href="#">Success</a>
+<a class="button button--error" href="#">Error</a>
+
+```
+
+```html
+<a class="button button--primary" href="#">Primary</a>
+<a class="button button--success" href="#">Success</a>
+<a class="button button--error" href="#">Error</a>
+```
+
+*/
+
+.button--primary {
+  background-color: #0078e7;
+  color: #fff;
+}
+
+.button--success {
+  background: rgb(28, 184, 65);
+  color: #fff;
+}
+
+.button--error {
+  background: rgb(202, 60, 60);
+  color: #fff;
+}

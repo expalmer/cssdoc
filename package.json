@@ -1,6 +1,6 @@
 {
   "name": "cssdoc",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Generating Documentation for CSS with Markdown",
   "repository": "expalmer/cssdoc",
   "license": "MIT",
@@ -13,13 +13,15 @@
   ],
   "author": "Palmer Oliveira <expalmer@gmail.com>",
   "scripts": {
-    "test": "karma start --single-run"
+    "test": "./node_modules/.bin/mocha --reporter spec"
   },
   "dependencies": {
     "co-fs-extra": "^1.1.0",
     "gray-matter": "^2.0.2",
     "highlight.js": "^8.9.1",
     "marked": "^0.3.5",
-    "swig": "^1.4.2"
+    "slug": "^0.9.1",
+    "swig": "^1.4.2",
+    "walk-sync": "^0.2.6"
   }
 }

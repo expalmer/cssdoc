@@ -12,24 +12,20 @@ html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:1
 }
 
 body {
-  font-family: 'Titillium Web', sans-serif;
-  font-size: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 80%;
   color: #333;
   background: #fff;
 }
 
-a:hover, a:active {
-  outline: none;
-  text-decoration: none;
+img {
+  max-width:100%;
+  box-sizing:border-box
 }
 
-.cssdoc_row {
-  width: 100%;
-  max-width:75rem;
-  margin:0 auto;
-}
 
-.cssdoc_row:after, .clearfix:after  {
+.cssdoc_container:after,
+.clearfix:after  {
   content: "";
   display: table;
   clear: both
@@ -37,160 +33,195 @@ a:hover, a:active {
 .cssdoc_container:before,
 .cssdoc_container:after {
   display: table;
-  content: " ";
-}
-
-.cssdoc_container:after {
-  clear: both;
-}
-
-.cssdoc_row .cssdoc_row {
-  margin-left: -0.65rem; /* minus left gutter for nested rows */
-  margin-right: -0.65rem; /* minus Right gutter for nested rows */
-  width: auto;
-}
-
-[class*='cssdoc_col--'] {
-  float: left;
-  position: relative;
-  padding: 0.65rem; /* top, bottom, left and right padding for columns */
-  width:100%;
-}
-
-.cssdoc_col--1-4 { width: 25%; }
-.cssdoc_col--1-3 { width: 33.333333333333%; }
-.cssdoc_col--1-2 { width: 50%; }
-.cssdoc_col--3-4 { width: 75%; }
-.cssdoc_col--1 { width: 100%; }
-
-
-img {
-  max-width:100%;
-  box-sizing:border-box
+  content: "";
 }
 
 /* ==========================================================================
-   Container
+   Main
    ========================================================================== */
-.cssdoc_container {
-  margin: auto;
-  max-width: 1020px;
-  padding-left: 20px;
-  padding-right: 20px;
+.cssdoc_main {
+  margin: 10px 0;
 }
-
-.gradient {
-  background: #4d773a;
-  background: -moz-linear-gradient(45deg, #4d773a 0%, #436367 100%);
-  background: -webkit-gradient(left bottom, right top, color-stop(0%, #4d773a), color-stop(100%, #436367));
-  background: -webkit-linear-gradient(45deg, #4d773a 0%, #436367 100%);
-  background: -o-linear-gradient(45deg, #4d773a 0%, #436367 100%);
-  background: -ms-linear-gradient(45deg, #4d773a 0%, #436367 100%);
-  background: linear-gradient(45deg, #4d773a 0%, #436367 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4d773a', endColorstr='#436367', GradientType=1 );
-  margin: 0 auto;
-}
-
 
 /* ==========================================================================
    Header
    ========================================================================== */
 .cssdoc_header {
-  padding: 10px 0;
-  color: #fff;
-  margin-bottom: 30px;
-  border-bottom: solid 10px #538269;
-}
-
-.cssdoc_header h1 {
-  float: left;
-  margin: 30px 0 0 10px;
-  font-size: 1em;
+  text-align: center;
 }
 
 .cssdoc_logo {
-  float: left;
+  display: inline-block;
   width: 70px;
   height: 70px;
-  display: inline-block;
+}
+
+.cssdoc_header h1 {
+  font-size: 1.2em;
+  margin: 2em 0;
+  font-weight: 700;
 }
 
 /* ==========================================================================
-   Menu
+   Menu Mobile
    ========================================================================== */
-.cssdoc_menu {
-  padding: 0;
+.cssdoc_menu_mobile {
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,.7);
+  font-size: 11px;
+  z-index: 10;
+  width: 4em;
+  height: 4em;
+  padding: 1em;
+  transition: left .3s ease-in-out;
+}
+.cssdoc_menu_mobile span {
+  position: relative;
+  margin-top: 0.9em;
+  display: block;
+}
+.cssdoc_menu_mobile span,
+.cssdoc_menu_mobile span:before,
+.cssdoc_menu_mobile span:after {
+  background-color: #fff;
+  width: 100%;
+  height: .2em;
+  transition: all 0.4s;
+}
+.cssdoc_menu_mobile span:before,
+.cssdoc_menu_mobile span:after {
+  content: '';
+  position: absolute;
+  top: -.55em;
+}
+.cssdoc_menu_mobile span:after {
+  top: .55em;
+}
+
+.opened span {
+  background: transparent;
+}
+.opened span:before {
+  transform: rotate(45deg) translate(.5em, .4em);
+}
+
+.opened span:after {
+  transform: rotate(-45deg) translate(.4em, -.3em);
+}
+
+.opened.cssdoc_menu_mobile {
+  left: 300px
+}
+
+/* ==========================================================================
+   Nav Menu
+   ========================================================================== */
+.cssdoc_nav {
   margin: 0;
 }
 
-.cssdoc_menu > li {
+.cssdoc_menu {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: -300px;
+  z-index: 10;
+  width: 300px;
+  background: #222;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5), 0 2px 10px 0 rgba(0, 0, 0, 0.5);
+  height: 100%;
+  overflow-y: auto;
+  transition: left .3s ease-in-out;
+  z-index: 9;
+}
+
+.cssdoc_menu:after {
+  display: none;
+  position: fixed;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
+.opened.cssdoc_menu {
+  left: 0;
+}
+
+.opened.cssdoc_menu:after {
+  display: block;
+}
+
+.cssdoc_menu li {
   list-style: none;
-  border-bottom: solid 1px #eee;
-  border-left: solid 1px #eee;
-  border-right: solid 1px #eee;
-}
-.cssdoc_menu > li:first-child {
-  border-top: solid 1px #eee;
-  border-top-right-radius: 4px;
-  border-top-left-radius: 4px;
-}
-.cssdoc_menu > li:last-child {
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
 }
 
 .cssdoc_menu__item {
-  position: relative;
   margin: 0;
   display: block;
-  color: #333;
-  font-size: 0.95em;
-  padding: 0.5em 1em;
+  color: #fff;
+  font-size: 1.4em;
+  padding: .5em 1em;
   line-height: 1.5em;
-  font-weight: 600;
+  font-weight: 400;
   text-decoration: none;
   transition: all .3s ease-in-out;
 }
 
 .cssdoc_menu__item:hover,
-.cssdoc_menu__item.selected{
-  color: #4d773a;
-  background: #f9f9f9;
-}
-
-.cssdoc_menu__item:hover:before,
-.cssdoc_menu__item.selected:before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 2px;
-  content: "";
-  background-color: #4d773a;
+.cssdoc_menu__item.selected {
+  color: #9F78B6;
+  text-decoration: none;
 }
 
 .cssdoc_submenu {
+  display: block;
   padding: 0;
-  margin-left: 1.5em;
+  margin-left: 2em;
   margin-bottom: .3em;
+  transition: all .3s;
 }
 
-.cssdoc_submenu > li {
-  list-style: none;
+.cssdoc_submenu li {
+  display: block;
+  width: 100%;
 }
 
 .cssdoc_submenu__item {
-  display: inline-block;
+  display: block;
   margin: 0 0 .3em;
   padding: .3em;
   color: #999;
-  font-size: .75em;
-  font-weight: 600;
+  font-size: 1.2em;
+  font-weight: 100;
   text-decoration: none;
   transition: color .3s ease-in-out;
 }
-.cssdoc_submenu__item:hover {
-  color: #4d773a;
+
+.cssdoc_submenu__item:hover,
+.cssdoc_submenu__item.selected {
+  color: #9F78B6;
+  text-decoration: none;
+}
+
+.selected + .cssdoc_submenu {
+  display: block;
+}
+
+/* ==========================================================================
+  Content
+  ========================================================================== */
+.cssdoc_content {
+  position: relative;
+  margin: 20px;
 }
 
 /* ==========================================================================
@@ -277,14 +308,106 @@ img {
    Footer
    ========================================================================== */
 .cssdoc_footer {
-  padding: 40px 0;
-  font-size: 0.9em;
-  color: #111;
-  border-top: 1px solid #eee;
-  text-align: right;
+  display: block;
+  margin: 20px 0;
+  font-size: .9em;
   color: #999;
+  text-align: right;
 }
 
-.cssdoc_footer strong {
-  color: #111;
+.cssdoc_footer a {
+  color: #9F78B6;
+}
+
+.cssdoc_footer a:hover, a:active {
+  color: #65C7DA;
+  outline: none;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 820px) {
+
+  body {
+    font-size: 100%;
+  }
+
+  /* ==========================================================================
+     Main
+     ========================================================================== */
+  .cssdoc_main {
+    position: fixed;
+    top: 20px;
+    left: 3%;
+    width: 260px;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  /* ==========================================================================
+     Header
+     ========================================================================== */
+  .cssdoc_header h1 {
+    font-size: 1em;
+  }
+
+  .cssdoc_logo {
+    width: 124px;
+    height: 124px;
+  }
+
+  /* ==========================================================================
+   Menu Mobile
+   ========================================================================== */
+  .cssdoc_menu_mobile {
+    display: none;
+  }
+
+  /* ==========================================================================
+     Nav Menu
+     ========================================================================== */
+  .cssdoc_nav {
+    margin: 20px 0;
+  }
+
+  .cssdoc_menu {
+    position: static;
+    background: transparent;
+    box-shadow: none;
+    width: auto;
+    height: auto;
+    border: solid 1px #eee;
+    border-radius: 10px;
+  }
+
+  .cssdoc_menu:after {
+    display: none!important;
+  }
+
+  .cssdoc_menu__item {
+    color: #333;
+    font-size: 1em;
+    font-weight: 700;
+  }
+
+  .cssdoc_submenu {
+    display: none;
+  }
+
+  .cssdoc_submenu__item {
+    color: #999;
+    font-size: .75em;
+    font-weight: 600;
+  }
+
+  /* ==========================================================================
+     Content
+     ========================================================================== */
+  .cssdoc_content {
+    position: relative;
+    margin-top: 20px;
+    margin-left: calc(300px + 3%);
+    margin-right: 3%;
+    margin-bottom: 40px;
+  }
+
 }

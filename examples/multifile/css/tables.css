@@ -1,0 +1,100 @@
+/*---
+title: Tables
+resume: Simple css tables.
+section: Default Table
+---
+
+To style an HTML table, add the ``table`` classname.
+
+
+```example
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Race</th>
+      <th>Weapon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Galadriel</td>
+      <td>Elves</td>
+      <td>Elven Magic, Nenya</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Legolas</td>
+      <td>Elves</td>
+      <td>Bow, Knife</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Gandalf</td>
+      <td>Maiar</td>
+      <td>Glamdring, Wizard Staff, Sword</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+```html
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Race</th>
+      <th>Weapon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Galadriel</td>
+      <td>Elves</td>
+      <td>Elven Magic, Nenya</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Legolas</td>
+      <td>Elves</td>
+      <td>Bow, Knife</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Gandalf</td>
+      <td>Maiar</td>
+      <td>Glamdring, Wizard Staff, Sword</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+*/
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+
+.table thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.table td,
+.table th {
+  padding: 0.5em 1em;
+  border-left: 1px solid #cbcbcb;
+  border-width: 0 0 0 1px;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible;
+}

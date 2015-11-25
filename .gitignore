@@ -3,3 +3,9 @@ node_modules
 
 # OSX
 .DS_Store
+
+# Examples
+examples/bootstrap4/build
+examples/mystyleguide/build
+examples/primercss/build
+examples/multifile/build

@@ -1,0 +1,217 @@
+/*---
+title: Buttons
+resume: My Awesome buttons
+section: Default
+---
+
+To create a button, add the ``button`` classname to any ``<a>`` or ``<button>`` element.
+
+
+```example
+<button class="button">Default</button>
+```
+
+```html
+<button class="button">Default</button>
+```
+
+*/
+
+.button {
+  display: inline-block;
+  zoom: 1;
+  line-height: normal;
+  white-space: nowrap;
+  vertical-align: middle;
+  text-align: center;
+  cursor: pointer;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 100%;
+  padding: .5em 1em;
+  color: #444;
+  color: rgba(0,0,0,.8);
+  border: 1px solid #999;
+  border: 0 rgba(0,0,0,0);
+  background-color: #E6E6E6;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background-image: linear-gradient(transparent, rgba(0,0,0,.05) 40%, rgba(0,0,0,.1));
+}
+
+/*---
+title: Buttons
+section: Variations
+---
+
+Some button variations like ``primary``, ``success`` and ``error``.
+
+```example
+<a class="button button--primary" href="#">Primary</a>
+<a class="button button--success" href="#">Success</a>
+<a class="button button--error" href="#">Error</a>
+
+```
+
+```html
+<a class="button button--primary" href="#">Primary</a>
+<a class="button button--success" href="#">Success</a>
+<a class="button button--error" href="#">Error</a>
+```
+
+*/
+
+.button--primary {
+  background-color: #0078e7;
+  color: #fff;
+}
+
+.button--success {
+  background: rgb(28, 184, 65);
+  color: #fff;
+}
+
+.button--error {
+  background: rgb(202, 60, 60);
+  color: #fff;
+}
+
+
+/*---
+title: Tables
+resume: Simple css tables.
+section: Default Table
+---
+
+To style an HTML table, add the ``table`` classname.
+
+
+```example
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Race</th>
+      <th>Weapon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Galadriel</td>
+      <td>Elves</td>
+      <td>Elven Magic, Nenya</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Legolas</td>
+      <td>Elves</td>
+      <td>Bow, Knife</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Gandalf</td>
+      <td>Maiar</td>
+      <td>Glamdring, Wizard Staff, Sword</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+```html
+<table class="table">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Race</th>
+      <th>Weapon</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Galadriel</td>
+      <td>Elves</td>
+      <td>Elven Magic, Nenya</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Legolas</td>
+      <td>Elves</td>
+      <td>Bow, Knife</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Gandalf</td>
+      <td>Maiar</td>
+      <td>Glamdring, Wizard Staff, Sword</td>
+    </tr>
+  </tbody>
+</table>
+```
+
+*/
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  empty-cells: show;
+  border: 1px solid #cbcbcb;
+}
+
+.table thead {
+  background-color: #e0e0e0;
+  color: #000;
+  text-align: left;
+  vertical-align: bottom;
+}
+
+.table td,
+.table th {
+  padding: 0.5em 1em;
+  border-left: 1px solid #cbcbcb;
+  border-width: 0 0 0 1px;
+  font-size: inherit;
+  margin: 0;
+  overflow: visible;
+}
+
+/*---
+title: Plus
+resume: You can put more than only css...
+section: Any Language
+---
+
+You can put any language...like
+
+
+```javascript
+// js
+var name = 'John Doe';
+var func = function() {
+  return 1;
+}
+```
+
+```css
+.my-class {
+  color: #000;
+  background: #123;
+}
+```
+
+```php
+<?php
+
+require('css/Styles.php');
+$style = new Styles();
+
+```
+
+*/
