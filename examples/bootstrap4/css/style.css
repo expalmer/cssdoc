@@ -1,189 +1,48 @@
 /*---
-title: Buttons
-resume: Example with Bootstrap 4
-section: Buttons
+title: CSS/Multi-column Layout
+resume: Example with CSS column
+section: Column
 ---
 
-Bootstrap includes six predefined button styles, each serving its own semantic purpose.
+The use of css multi-column layout allows users to read multiple
+ lines of text without losing track of which line they were on, 
+ on the webpage. So the column of text placed side-by-side as seen in newspapers. 
+ there are different properties of css column
 
 ```example
-  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-  <button type="button" class="btn btn-primary">Primary</button>
+  <!-- Column-count property sets the column of the page according to the number given. -->
+  
+  ```html 
+  <div id="col">The life of man is not determined by the background or its eductional 
+  qualification but my its ability to change it thinking. Your thinking determines who you are</div>
+  
+  ```code for css
+  #col {
+	  column-count :2;  // This display the content into two column
+  }
+ 
+  <!-- Column-width property sets the width of the column  -->
+  #col {
+	  column-width :100px;  
+  }
 
-  <!-- Secondary, outline button -->
-  <button type="button" class="btn btn-secondary">Secondary</button>
-
-  <!-- Indicates a successful or positive action -->
-  <button type="button" class="btn btn-success">Success</button>
-
-  <!-- Indicates caution should be taken with this action -->
-  <button type="button" class="btn btn-warning">Warning</button>
-
-  <!-- Indicates a dangerous or potentially negative action -->
-  <button type="button" class="btn btn-danger">Danger</button>
-
-  <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-  <button type="button" class="btn btn-link">Link</button>
-```
-
-```html
-  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-  <button type="button" class="btn btn-primary">Primary</button>
-
-  <!-- Secondary, outline button -->
-  <button type="button" class="btn btn-secondary">Secondary</button>
-
-  <!-- Indicates a successful or positive action -->
-  <button type="button" class="btn btn-success">Success</button>
-
-  <!-- Indicates caution should be taken with this action -->
-  <button type="button" class="btn btn-warning">Warning</button>
-
-  <!-- Indicates a dangerous or potentially negative action -->
-  <button type="button" class="btn btn-danger">Danger</button>
-
-  <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-  <button type="button" class="btn btn-link">Link</button>
-```
-*/
-
-/*---
-title: Buttons
-section: Button Tags
----
-
-The ``.btn`` classes are designed to be used with the ``<button>`` element. However, you can also use these classes on ``<a>`` or ``<input>`` elements (though some browsers may apply a slightly different rendering).
-
-When using button classes on ``<a>`` elements that are used to trigger in-page functionality (like collapsing content), rather than linking to new pages or sections within the current page, these links should be given a ``role="button"`` to appropriately convey their purpose to assistive technologies such as screen readers.
-
-```example
-  <a class="btn btn-primary" href="#" role="button">Link</a>
-  <button class="btn btn-primary" type="submit">Button</button>
-  <input class="btn btn-primary" type="button" value="Input">
-  <input class="btn btn-primary" type="submit" value="Submit">
-```
-
-```html
-  <a class="btn btn-primary" href="#" role="button">Link</a>
-  <button class="btn btn-primary" type="submit">Button</button>
-  <input class="btn btn-primary" type="button" value="Input">
-  <input class="btn btn-primary" type="submit" value="Submit">
-```
-*/
-
-/*---
-title: Buttons
-section: Outline buttons
----
-
-In need of a button, but not the hefty background colors they bring? Replace the default modifier classes with the ``.btn-*-outline`` ones to remove all background images and colors on any button.
-
-```example
-  <button type="button" class="btn btn-primary-outline">Primary</button>
-  <button type="button" class="btn btn-secondary-outline">Secondary</button>
-  <button type="button" class="btn btn-success-outline">Success</button>
-  <button type="button" class="btn btn-warning-outline">Warning</button>
-  <button type="button" class="btn btn-danger-outline">Danger</button>
-```
-
-```html
-  <button type="button" class="btn btn-primary-outline">Primary</button>
-  <button type="button" class="btn btn-secondary-outline">Secondary</button>
-  <button type="button" class="btn btn-success-outline">Success</button>
-  <button type="button" class="btn btn-warning-outline">Warning</button>
-  <button type="button" class="btn btn-danger-outline">Danger</button>
-```
-*/
-
-/*---
-title: Labels
-resume: Small and adaptive tag for adding context to just about any content.
-section: Context Variation
----
-
-Add any of the below mentioned modifier classes to change the appearance of a label.
-
-```example
-  <span class="label label-default">Default</span>
-  <span class="label label-primary">Primary</span>
-  <span class="label label-success">Success</span>
-  <span class="label label-info">Info</span>
-  <span class="label label-warning">Warning</span>
-  <span class="label label-danger">Danger</span>
-```
-
-```html
-  <span class="label label-default">Default</span>
-  <span class="label label-primary">Primary</span>
-  <span class="label label-success">Success</span>
-  <span class="label label-info">Info</span>
-  <span class="label label-warning">Warning</span>
-  <span class="label label-danger">Danger</span>
-```
-*/
-
-
-/*---
-title: Labels
-section: Example
----
-
-Labels scale to match the size of the immediate parent element by using relative font sizing and ``em`` units.
-
-```example
-  <h1>Example heading <span class="label label-default">New</span></h1>
-  <h2>Example heading <span class="label label-default">New</span></h2>
-  <h3>Example heading <span class="label label-default">New</span></h3>
-  <h4>Example heading <span class="label label-default">New</span></h4>
-  <h5>Example heading <span class="label label-default">New</span></h5>
-  <h6>Example heading <span class="label label-default">New</span></h6>
-```
-
-```html
-  <h1>Example heading <span class="label label-default">New</span></h1>
-  <h2>Example heading <span class="label label-default">New</span></h2>
-  <h3>Example heading <span class="label label-default">New</span></h3>
-  <h4>Example heading <span class="label label-default">New</span></h4>
-  <h5>Example heading <span class="label label-default">New</span></h5>
-  <h6>Example heading <span class="label label-default">New</span></h6>
-```
-*/
-
-/*---
-title: Alerts
-resume: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages.
-section: Example
----
-
-Alerts are available for any length of text, as well as an optional dismiss button. For proper styling, use one of the four required contextual classes (e.g., .alert-success). For inline dismissal, use the alerts jQuery plugin.
-
-```example
-  <div class="alert alert-success" role="alert">
-    <strong>Well done!</strong> You successfully read this important alert message.
-  </div>
-  <div class="alert alert-info" role="alert">
-    <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-  </div>
-  <div class="alert alert-warning" role="alert">
-    <strong>Warning!</strong> Better check yourself, you're not looking too good.
-  </div>
-  <div class="alert alert-danger" role="alert">
-    <strong>Oh snap!</strong> Change a few things up and try submitting again.
-  </div>
-```
-
-```html
-  <div class="alert alert-success" role="alert">
-    <strong>Well done!</strong> You successfully read this important alert message.
-  </div>
-  <div class="alert alert-info" role="alert">
-    <strong>Heads up!</strong> This alert needs your attention, but it's not super important.
-  </div>
-  <div class="alert alert-warning" role="alert">
-    <strong>Warning!</strong> Better check yourself, you're not looking too good.
-  </div>
-  <div class="alert alert-danger" role="alert">
-    <strong>Oh snap!</strong> Change a few things up and try submitting again.
-  </div>
+  <!-- Column-gap property sets the gap between the column  -->
+  #col {
+	  column-gap :30px;  
+  }
+  
+   <!-- Column-rule property sets a line between each column, and can also be style with given a color and width   -->
+  #col {
+	  column-rule :2px, outset, #00ff00;  
+  }
+   <!-- Column-fill property sets how content partitioned into column, it can be Balance, Auto, Inherit or Intial -->
+  #col {
+	  column-fill :balance;   //Content in all the columns will have the same height.
+	  column-fill:auto;       //This fill the colunm seqentially
+	  column-fill:inherit;    //This property inherit from his parent element.
+	  column-fill:intial;     //set the property to its default value.
+  }
+  
+  
 ```
 */
