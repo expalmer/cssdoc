@@ -1,0 +1,64 @@
+﻿/*---
+title: CSS3 Animations
+resume: Example with CSS3 Animations
+section: Animations
+---
+
+CSS3 animation allows animation of all html element without the need of Javascript or Flash. 
+However, there are two propeties KeyFrame and animation that get an animation style to work in css.
+The keyFrame hold what style an element will have at a certain time, and animation property
+define how it should be animated.
+
+
+```example
+  <!-- To animate a section in the webpage. -->
+  
+  ```html 
+  <div class="anim">
+  <H1>Bounce In</H1> 
+  </div>
+  
+  ```code for css
+  <!-- To include animation to anim class -->
+  @keyframes bounceIn{			//The style of the animation is define here. Other slide include, slide, springy-text, sliding-vertically, etc.
+	 0%{
+		  transform: scale(0.1);		//The style at the start of the animation
+		  opacity:0;
+	    }
+	 50%{
+		   transform: scale(1.2);		//The style when the animation is 50% complete
+		  opacity:1;
+	     }
+	 100%{
+		   transform: scale(1);			//The style when the animation is 100% complete
+	     }
+		 
+  <!-- To apply animation to anim class -->
+	.anim {
+		animation-name:bounceIn;		//as declared in keyFrame
+		animation-duration:2s;			//the duration of animation which can also be in milliseconds(e.g., 100ms)
+	}
+ 
+  <!-- This will be the shorthand code to write -->
+  .anim {
+	  animation:bounceIn 2s;   
+  }
+
+  <!-- other properties of aninmation to add -->
+ .anim {
+		animation-name:bounceIn;		
+		animation-duration:2s;	
+		animation-timing-function:ease;			//Defines the pace of the animation, e.g ease-out, ease-in-out, linear, intial, etc.
+		animation-delay:2s;						//When you want the animation to start once its triggerd
+		animation-iteration-count:3;			//How many times you want the animation to play
+		animation direction:alternate-reverse;	//This specify how the animation should be played, in-reverse, forward or in alternate cycles.
+		animation-fill-mode:backwards;			//This cause your style of animation to be visible before or after plays
+	}
+	
+   <!-- To shorthand this code, every property can be separated by comas -->
+ .anim {
+	 animation: bounceIn, 2s, ease, 2s, 3, alternate-reverse, backwards
+ }
+	 
+```
+*/
