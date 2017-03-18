@@ -1,0 +1,76 @@
+﻿/*---
+title: CSS3 2D / 3D Transformation 
+resume: Examples with the text transformation
+section: Text Transformations
+---
+
+CSS again is about style a webpage to provide user with better expereicne whilst using the page. 
+CSS3 transformation such as 2D and 3D allows you to translate, rotate, skew, and scale elements, elements sucha as html texts, images, etc.
+This transformation lets an element change position, shape and size.
+
+
+```example
+  <!-- 2D Transformation Method-->
+  
+  ```html 
+  <div class="Trans">
+  <H1>The man is not who he say he is</H1> 
+  <img src="index.jpg" width="100" border="0">
+  </div>
+  
+  ```Stylesheet code for 2D transformation
+  <!-- Translate is a method of 2D -->
+  #txt H1{
+    transform: translate(150px, 100px);		//This changed the position of the text as given, the 150px is move the text to the right and down by 100px.
+}
+		 
+  <!-- 2D Rotation to the image -->
+	#txt img{
+	transform: rotate(30deg);		//This rotate the image by the value of the degree given
+}
+ 
+  <!-- 2D scale -->
+  #txt img{
+	transform: scale(3, 2);			//This increases the width of the image three times its orginal size and two times its height
+}
+
+  <!-- 2D Skews Method -->
+  #txt img{
+	transform: skewX(20deg);		//This skew the image according to the value of the degree. 
+	transform: skewY(10deg); 		//You can define the X and Y separately or have it together as below.
+	transform: skewX,Y(20deg, 10deg);
+  }
+  
+ <!-- 2D Matrix Method -->
+ ```Matrix method allow you to combine all the 2D method in one line-height
+ matrix(translateX(),translateY(),scaleX(),scaleY(),skewX(),skewY()):
+ #txt img{
+	matrix(translateX(150px),translateY(100px),scaleX(3),scaleY(2),skewX(20),skewY(10));
+  }
+
+  ```Stylesheet code for 3D transformation
+  Differenct between 2D and 3D is that you have more and advance features in 3D
+ 
+ ```Stylesheet code for 3D transformation
+  <!-- Translate is a method of 3D -->
+  #txt H1{
+    transform: translate(150px, 100px, 75px);		//For 3D translate method has (X,Y,Z) parameters. 
+}
+ 
+  <!-- 3D scale -->
+  #txt img{
+	transform: scale(3, 2, 2);			// Perform the same function as 2D but with 3 parameters.
+}
+
+  <!-- 2D Skews Method -->
+  #txt img{
+	transform: skewX(20deg);	
+	transform: skewY(10deg); 		
+	transform: skewZ(10deg);
+  }
+  
+``` These are just the basic and there are more methods, and unless you play with it and try different method, 
+you might not fully understand how it works.
+
+
+*/
